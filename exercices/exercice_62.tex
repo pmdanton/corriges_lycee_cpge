@@ -1,0 +1,18 @@
+Pour tout $x\in\mathbb{R}$
+\[
+\sqrt{x^2} + \sqrt{(x-1)^2} = |x|+|1-x|
+\]
+On distingue trois cas:
+\begin{itemize}
+  \item $x<0 \Rightarrow |1-x| > 1 \Rightarrow |x|+|1-x| > 1$
+  \item $x>1 \Rightarrow |x| > 1 \Rightarrow |x|+|1-x| > 1$
+  \item $x\in[0,1]\Rightarrow |x|+|1-x|=x+(1-x)=1$
+\end{itemize}
+Finalement, l'ensemble des solutions est $[0,1]$.\\ \\
+
+\textit{Interprétation géométrique et solution plus élégante}: la valeur absolue mesure la distance "usuelle" (euclidienne): $|x|=|x-0|$ est la distance de $x$ à 0, et $|x-1|$ est la distance de $x$ à 1. On cherche donc des points dont la distance à 0 plus la distance à 1 est identique. Si l'on prend le problème dans $\mathbb{R}^2$ au lieu de $\mathbb{R}$, c'est-à-dire dans le plan au lieu de sur une droite, c'est la définition d'une ellipse de foyers (0,0) et (1,0).
+\begin{itemize}
+  \item Ici, comme la constante est exactement la distance entre les foyers, l'ellipse est aplatie et devient le segment entre les foyers, c'est-a-dire $[0,1]$: on a donc une solution sans calcul, mais qui demande une certaine culture géométrique!
+  \item Si la constante était strictement inférieure a la distance entre les foyers, il n'y aurait aucune solution, ni sur la droite, ni dans le plan. 
+  \item Enfin, si la constante était strictement supérieure a la distance entre les foyers, les deux solutions réelles seraient l'intersection de l'ellipse avec l'axe des abscisses.
+  \end{itemize}

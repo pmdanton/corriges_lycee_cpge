@@ -1,0 +1,14 @@
+Soit $n \in \mathbb{N}^*$. Montrons par récurrence finie que pour tout entier $0 \leq k \leq n$, $\forall x\in \mathbb{R}, \, g^{(k)}(x)=a^kf^{(k)}(ax+b)$.
+\begin{itemize}
+  \item \textit{Initialisation}: pour $k=0$, $g(x)=f(ax+b)$ pour tout réel $x$ par définition.
+  \item \textit{Hérédité}: supposons la propriété vraie au rang $k \leq n-1$, alors pour tout $x \in \mathbb{R}$:
+  \begin{eqnarray}
+    g^{(k+1)}(x) &=& \left( g^{(k)}(x) \right)'  \nonumber \\
+                &=& \left( a^kf^{(k)}(ax+b) \right)'  \nonumber \\
+                &=& a^k \left( f^{(k)}(ax+b) \right)'  \nonumber \\
+                &=& a^{k+1} f^{(k+1)}(ax+b)  \nonumber 
+  \end{eqnarray}
+  Ce qui prouve le résultat.
+\end{itemize}
+
+\textit{Remarque:} il est utile de calculer les premières dérivées à la main pour avoir l'intuition du résultat.

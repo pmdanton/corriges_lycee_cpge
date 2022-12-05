@@ -1,0 +1,14 @@
+Prouvons l’énoncé par récurrence sur $n\in\mathbb{N}$.
+\begin{itemize} 
+\item \textit{Initialisation}: La propriété est triviale au rang $n=0$ ($\cos=\cos$).\\
+\item \textit{Hérédité}: Supposons la propriété vérifiée au rang $n\in\mathbb{N}$, alors pour tout $ x \in \mathbb{R}$:
+\begin{eqnarray}
+ \cos^{(n+1)}(x) &=& \left(\cos^{(n)}(x)\right)' \nonumber \\
+  &=&  \left(\cos \left( x+\frac{n\pi}{2} \right) \right)' \nonumber \\
+  &=&  -\sin \left( x+\frac{n\pi}{2} \right) \nonumber \\
+  &=&  \cos \left( x+\frac{n\pi}{2} +\frac{\pi}{2}\right) \nonumber \\
+  &=&  \cos \left( x+\frac{(n+1)\pi}{2}\right) \nonumber 
+\end{eqnarray}
+donc la propriété est vraie au rang $n+1$.
+\end{itemize}
+\textit{Remarque}: on a utilisé le fait que $\cos'=-\sin$, et que: $\forall \theta\in\mathbb{R}, \, \sin(\theta)=-\cos \left(\theta+\frac{\pi}{2}\right)$, qui se retrouve facilement en dessinant le cercle trigonométrique.

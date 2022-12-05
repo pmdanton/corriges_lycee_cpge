@@ -1,0 +1,6 @@
+Pour tout $n\in \mathbb{N}^*$:
+\begin{eqnarray}
+  u_{n+1}-u_n &=& \sum_{k=n+1}^{2n+2}{\frac{1}{k}} - \sum_{k=n}^{2n}{\frac{1}{k}} \nonumber \\
+       &=& \frac{1}{2n+2} + \frac{1}{2n+1} - \frac{1}{n} \nonumber 
+\end{eqnarray}
+de plus, $ \frac{1}{2n+2} < \frac{1}{2n}$ et $ \frac{1}{2n+1} < \frac{1}{2n}$, donc $\frac{1}{2n+2} + \frac{1}{2n+2} < \frac{1}{n}$ ce qui prouve que $u_{n+1}-u_n<0$: la suite $(u_n)$ est strictement décroissante.

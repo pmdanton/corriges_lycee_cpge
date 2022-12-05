@@ -1,0 +1,8 @@
+On sait que pour tout $(a,b)\in\mathbb{R}^2$, $(a+b)(a-b)=a^2-b^2$. En prenant $a=\sqrt{k+1}$ et $b=\sqrt{k}$ dans chaque terme de la somme, il vient:
+\begin{eqnarray}
+  \sum_{k=1}^n{\frac{1}{\sqrt{k}+\sqrt{k+1}}} \geq 2022 &\Leftrightarrow & \sum_{k=1}^n{\frac{\sqrt{k+1}-\sqrt{k}}{(k+1)-k}} \geq 2022 \nonumber \\
+  &\Leftrightarrow & \sum_{k=1}^n{\left(\sqrt{k+1}-\sqrt{k}\right)} \geq 2022 \nonumber \\
+  &\Leftrightarrow &  \sqrt{n+1} - 1 \geq 2022 \quad \textrm{par téléscopage}\nonumber \\
+  &\Leftrightarrow &  n\geq 2023^2-1 \nonumber 
+\end{eqnarray}
+ Finalement, le plus petit entier solution est $2023^2-1$.

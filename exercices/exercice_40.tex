@@ -1,0 +1,19 @@
+a) Soient $n\in\mathbb{N}^*$ et $x\in\mathbb{R}$. Le cas $x=1$ est connu:
+\[
+\sum_{k=0}^n{k} = \frac{n(n+1)}{2}
+\]
+
+Supposons maintenant $x\neq 1$, ce qui va permettre de diviser par $1-x$ dans la suite. L’idée est de faire "apparaître" une dérivée: au lieu de $kx^k$, on voudrait $kx^{k-1}$, qui est la dérivée de $x\mapsto x^{k}$; on factorise donc par $x$:
+\begin{eqnarray}
+\sum_{k=0}^n{kx^k} &=& x\sum_{k=0}^n{kx^{k-1}} \nonumber \\
+ &=& x\sum_{k=0}^n{\left( x^k \right)'} \nonumber \\
+  &=& x \left( \sum_{k=0}^n{ x^k }\right)' \nonumber \\
+  &=& x \left( \frac{x^{n+1}-1}{x-1} \right)' \nonumber \\
+  &=& x \frac{(n+1)x^n(x-1)-(x^{n+1}-1)}{(x-1)^2} \nonumber \\
+  &=& x \frac{nx^{n+1}-(n+1)x^n+1}{(x-1)^2} \nonumber
+\end{eqnarray}
+
+b) Pour tout $x\in ]-1,1[$, $nx^{n+1}\to 0$ et $(n+1)x^n\to 0$ quand $n\to+\infty$, donc:
+\[
+\forall x\in ]-1,1[, \quad \sum_{k=0}^n{kx^k} \mathop{\to}_{n\to +\infty} \frac{x}{(x-1)^2}
+\]

@@ -1,0 +1,8 @@
+On va utiliser les notations et le résultat de l'exercice 70. On introduit en plus la notation "indicatrice" pour tout énoncé $p$: $1_{p}$ qui vaut 1 si $p$ est vrai et 0 sinon. 
+Dans l'exercice 70, on a vu que pour tout $x \in \mathbb{R}$,
+ $\lfloor 2x \rfloor = 2\lfloor x \rfloor + 1_{F(x)\geq \frac{1}{2}}$
+Comme $\lfloor x+y \rfloor = \lfloor x \rfloor  + \lfloor y \rfloor + \lfloor F(x)+F(y) \rfloor$, on obtient après simplification:
+\[
+\lfloor 2x \rfloor + \lfloor 2y \rfloor  - \lfloor x+y \rfloor  - \lfloor x \rfloor  - \lfloor x \rfloor = 1_{F(x)\geq \frac{1}{2}} + 1_{F(y)\geq \frac{1}{2}} - \lfloor F(x)+F(y) \rfloor 
+\]
+On remarque ensuite que $\lfloor F(x)+F(y) \rfloor = 1_{\min(F(x),F(y))\geq \frac{1}{2}}$ pour conclure: le résultat vaut $1+1-1=1$ si $\min(F(x), F(y)\geq \frac{1}{2}$, et $1_{F(x)\geq \frac{1}{2}} + 1_{F(y)\geq \frac{1}{2}} = 1_{\max(F(x), F(y))\geq \frac{1}{2}} \in \{0,1\}$ sinon. Dans tous les cas, $\lfloor 2x \rfloor + \lfloor 2y \rfloor  - \lfloor x+y \rfloor  - \lfloor x \rfloor  - \lfloor x \rfloor \in \{0,1\}$.

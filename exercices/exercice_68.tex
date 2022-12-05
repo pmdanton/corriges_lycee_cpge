@@ -1,0 +1,30 @@
+a) pour tout $n\in\mathbb{N}^*$ et $0\leq m \leq n-1$, on rappelle que:
+\[
+\binom{n}{m} = \frac{n!}{m!(n-m)!}
+\]
+et que la factorielle satisfait $(m+1)!=m!(m+1)$, donc en simplifiant:
+\[
+\frac{\binom{n}{m+1} }{\binom{n}{m} } = \frac{n-m}{m+1} = 1+\frac{n-2m-1}{m+1}
+\]
+ce qui montre que 
+\[
+\frac{\binom{n}{m+1}}{\binom{n}{m}}  \geq 1 \Leftrightarrow n-2m-1 \geq 0 \Leftrightarrow  m \leq \left\lfloor \frac{n-1}{2} \right\rfloor
+\]
+b) D’après le point a), on a toute de suite:
+\[
+\binom{n}{0} \leq \binom{n}{1} \leq \cdots \leq \binom{n}{\left\lfloor \frac{n-1}{2} \right\rfloor+1}
+\]
+or $\left\lfloor \frac{n-1}{2} \right\rfloor+1 =  \left\lfloor \frac{n-1}{2} +1\right\rfloor = \left\lfloor \frac{n+1}{2} \right\rfloor \geq \left\lfloor \frac{n}{2} \right\rfloor$, ce qui permet de retrouver le résultat de l’énonce.\\ \\
+c) On rappelle la formule du binôme: 
+\[
+\forall n \in \mathbb{N}^*, \forall (x,y)\in\mathbb{R}^2, \quad (x+y)^n=\sum_{k=0}^n{\binom{n}{k}x^ky^{n-k}} 
+\]
+En prenant $x=y=1$, et comme les coefficients binomiaux sont positifs\footnote{c'est important de le préciser, sinon la somme pour être inférieure à l'un de ses termes!}, on a tout de suite la majoration:
+\[
+\binom{n}{\left\lfloor \frac{n}{2} \right\rfloor} \leq \sum_{k=0}^n{\binom{n}{k}} = (1+1)^n = 2^n
+\]
+Reste la minoration: en se rappelant que $\binom{n}{k}=\binom{n}{n-k}$, on voit que $\binom{n}{\left\lfloor \frac{n}{2} \right\rfloor}$ majore en fait tous les $\binom{n}{k}$ pour $0\leq k \leq n$. Comme il y a exactement $n+1$ termes dans la formule du binôme, on a:
+\[
+2^n = \sum_{k=0}^n{\binom{n}{k}} \leq (n+1)\binom{n}{\left\lfloor \frac{n}{2} \right\rfloor}
+\]
+ce qui prouve finalement que $\frac{2^n}{n+1}\leq \binom{n}{\left\lfloor \frac{n}{2} \right\rfloor} \leq 2^n $.

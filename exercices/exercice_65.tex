@@ -1,0 +1,13 @@
+Soient deux réels positifs $a$ et $b$. Par symétrie de l’énoncé, on peut supposer sans perte de généralité que $a\geq b$.
+\begin{eqnarray}
+  \left| \sqrt{a}-\sqrt{b} \right| \leq \sqrt{|a-b|} &\Leftrightarrow &  \left( \sqrt{a}-\sqrt{b} \right)^2 \leq |a-b| \nonumber \\
+   &\Leftrightarrow &  a+b-2\sqrt{ab} \leq |a-b| \nonumber 
+\end{eqnarray}
+Puisqu'on a supposé $a \geq b \geq 0$, $\sqrt{ab}\geq b$ et $|a-b|=a-b$:
+\begin{eqnarray}
+  \left| \sqrt{a}-\sqrt{b} \right| \leq \sqrt{|a-b|} &\Leftrightarrow &  a+b-2b \leq a-b \nonumber \\
+  &\Leftrightarrow &  a-b \leq a-b \nonumber
+\end{eqnarray}
+Ce qui prouve le résultat.\\ \\
+\textit{Alternative}: on peut aussi utiliser le fait que pour $a$ et $b$ positifs, $|a-b|=\max(a,b)-\min(a,b)$, et $\min(a,b) \leq \sqrt{ab} \leq \max(a,b)$.
+ 

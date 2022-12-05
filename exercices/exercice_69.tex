@@ -1,0 +1,31 @@
+a) Soit $x\in\mathbb{R}$ et $k\in\mathbb{N}^*$. On note $f_k:x\mapsto |x-k|$, fonction définie de $\mathbb{R}$ dans $\mathbb{R}$. \\
+Elle est dérivable sur $\mathbb{R}\backslash{\{k\}}$ et sa dérivée vaut -1 si $x<k$, et +1 si $x>k$.\\
+ Par linéarité de la dérivation, on a donc que $f=\sum_{k=1}^n{f_k}$ est dérivable sur $\mathbb{K}=\mathbb{R}\backslash\{1,2,\cdots,2022\}$,
+ et sa dérivée au point $x\in\mathbb{K}$ vaut:
+ \[
+ (\textrm{nombre d'entiers naturels inferieurs à }x) - (\textrm{nombre d'entiers superieurs à } x \textrm{ et inferieurs à 2022})
+ \]
+ De façon informelle, on voit que ce nombre est négatif jusqu’à avoir autant d'entiers avant et après $x$ ($x<1011$), qu'alors il s'annule ($1011 < x < 1012$), et redevient positif ($x>1012$). Plus formellement, on écrit pour tout $x\in\mathbb{K}$:
+\begin{eqnarray}
+  f'(x) &=& -2022 \quad \textrm{si } x < 1 \nonumber \\
+  f'(x) &=& +2022 \quad \textrm{si } x > 2022 \nonumber \\
+  f'(x) &=& \lfloor x \rfloor - (2022-\lfloor x \rfloor)=2\lfloor x \rfloor -2022 \quad \textrm{si } x \in \mathbb{K}\cap ]1,2022[ \nonumber 
+\end{eqnarray}
+ Étudions le signe de $f'$ sur $\mathbb{K}\cap ]1,2022[$ pour étudier les variations de $f$. On rappelle que $x\in\mathbb{K}$, donc $x$ n'est jamais entier:
+ \begin{eqnarray}
+2\lfloor x \rfloor -2022 < 0 &\Leftrightarrow & \lfloor x \rfloor < 1011 \Leftrightarrow x < 1011 \nonumber \\
+2\lfloor x \rfloor -2022 = 0 &\Leftrightarrow & \lfloor x \rfloor = 1011 \Leftrightarrow x \in ]1011, 1012[ \nonumber \\
+2\lfloor x \rfloor -2022 > 0 &\Leftrightarrow & \lfloor x \rfloor > 1011 \Leftrightarrow x > 1012 \nonumber
+ \end{eqnarray}
+
+En recollant avec les autres intervalles, on conclut que $f$ est strictement décroissante sur $]-\infty, 1011[$, constante sur $]1011, 1012[$, et strictement croissante sur $[1012, +\infty[$. \\ \\
+b) D’après ce qui précède, et comme $f$ est continue sur $\mathbb{R}$, $f$ atteint son minimum en tout point de l'intervalle $]1011,1012[$. Considérons donc $m\in]1011,1012[$, et regroupons astucieusement les termes: à tout indice $1 \leq k\leq 1011$ on associe l'indice $k'=2023-k$. On observe que $k<m<k'$ donc $|m-k|+|m-k'|=|k'-k|=|2023-2k|$, donc:
+\[
+f(m)=\sum_{k=1}^{1011}{(2023-2k)}
+\]
+Effectuons le changement d'indice $j=1012-k$ (donc $k=1012-j$, ce qui revient simplement à sommer les termes "à l'envers"):
+\[
+f(m)=\sum_{k=j}^{1011}{(2j-1)}=1011^2
+\]
+car on se souvient, bien entendu, de la formule de la somme des nombres impairs! Pour rappel, elle est démontrée dans l'exercice 36.\\
+Finalement, le minimum de la fonction vaut $1011^2$.

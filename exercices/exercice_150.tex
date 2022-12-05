@@ -1,0 +1,15 @@
+Montrons l'existence de $P_n$ par récurrence sur $n\in\mathbb{N}$.
+\begin{itemize}
+  \item \textit{Initialisation}: pour $n=0$, on a clairement $P_0=1$.
+  \item \textit{Hérédité}: supposons la propriété vraie au rang $n\in \mathbb{N}$, alors pour tout $x \in \mathbb{R}^*$:
+  \begin{eqnarray}
+    f^{(n+1)}(x) &=& \left( f^{(n)}(x) \right)'  \nonumber \\
+                &=& \left( P_n(x)e^{-x^2} \right)'  \nonumber \\
+                &=& P_n'(x)e^{-x^2}-2xP_n(x)e^{-x^2}  \nonumber \\
+                &=& \left( P_n'(x) - 2xP_n(x) \right)e^{-x^2} \nonumber 
+  \end{eqnarray}
+  or $P_n'$ et $x\mapsto-2xP_n(x)$ sont des polynômes, donc leur somme l'est aussi.
+\end{itemize}
+Calculons $P_0,P_1,P_2$: on a vu que $P_0=1$. Puis, en utilisant la relation de récurrence, pour tout $x\in\mathbb{R}$, $P_1(x)=-2x$, et $P_2(x)=(-2)-2x(-2x)=4x^2-2$.\\
+
+\textit{Pour aller plus loin:} calculer le degré de $P_n$ pour tout $n\in\mathbb{N}$.

@@ -1,0 +1,15 @@
+Montrons par récurrence que pour tout entier $n\in \mathbb{N}$, et pour $x\in \mathbb{R}^*, \, f^{(n)}(x)=(-1)^nn!x^{-(n+1)}$.
+\begin{itemize}
+  \item \textit{Initialisation}: pour $n=0$, $f(x)=x^{-1}$ pour tout réel non nul $x$ par définition.
+  \item \textit{Hérédité}: supposons la propriété vraie au rang $n\in \mathbb{N}$, alors pour tout $x \in \mathbb{R}^*$:
+  \begin{eqnarray}
+    f^{(n+1)}(x) &=& \left( f^{(n)}(x) \right)'  \nonumber \\
+                &=& \left( (-1)^nn!x^{-(n+1)} \right)'  \nonumber \\
+                &=& (-1)^nn! \left( x^{-(n+1)} \right)'  \nonumber \\
+                &=& (-1)^nn!(-1)(n+1) x^{-(n+1)-1} \nonumber \\
+                &=& (-1)^{n+1}(n+1)!x^{-((n+1)+1)} \nonumber 
+  \end{eqnarray}
+  Ce qui prouve le résultat.
+\end{itemize}
+
+\textit{Remarque:} il est utile de calculer les premières dérivées à la main pour avoir l'intuition du résultat.
