@@ -1,0 +1,14 @@
+Prouvons le résultat par récurrence sur $n\in\mathbb{N}^*$:
+\begin{itemize}
+  \item \textit{Initialisation}: pour $n=1$, on a bien $\sqrt{2}=2\cos\left(\frac{\pi}{2}\right)$.
+  \item \textit{Hérédité}: Supposons la propriété vraie au range $n\geq 1$. Alors, en utilisant la formule de duplication du cosinus:
+  \begin{eqnarray*}
+    u_{n+1} &=& \sqrt{2+u_n} \\
+            &=& \sqrt{2+2\cos\left(\frac{\pi}{2^{n+1}}\right)} \\
+            &=& \sqrt{2+2\left( 2\cos^2\left(\frac{\pi}{2^{n+2}}\right) -1\right)} \\
+            &=& \sqrt{2+2\left( 2\cos^2\left(\frac{\pi}{2^{n+2}}\right) -1\right)} \\
+            &=& \sqrt{ 4\cos^2\left(\frac{\pi}{2^{n+2}}\right)} \\
+            &=& 2\cos\left(\frac{\pi}{2^{n+2}}\right) 
+  \end{eqnarray*}
+  car $0\leq \frac{\pi}{2^{n+2}} \leq \frac{\pi}{2} \Rightarrow \cos\left(\frac{\pi}{2^{n+2}}\right) \geq 0$. Ce qui achève la preuve.
+\end{itemize}

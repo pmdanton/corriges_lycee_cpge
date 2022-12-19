@@ -1,0 +1,16 @@
+Considérons la fonction $f:x\mapsto \cos(\sin(x))-\sin(\cos(x))$, définie sur $\mathbb{R}$, et montrons qu'elle est à valeurs strictement positives. Comme elle est continue, il suffit de montrer qu'elle ne s'annule pas, et l’évaluer en un point quelconque pour connaître son signe\footnote{C'est une application classique et pratique du théorème des valeurs intermédiaires}. Comme pour tout $x\in\mathbb{R}$, $\sin(x)=\cos\left( x-\frac{\pi}{2}\right)$, on a:
+\begin{eqnarray*}
+  \cos(\sin(x)) = \sin(\cos(x)) &\Rightarrow& \cos(\sin(x)) = \cos\left(\cos(x) - \frac{\pi}{2}\right) \\
+  &\Rightarrow& \sin(x) = \pm \left( \cos(x) - \frac{\pi}{2} \right) \textrm{ modulo } 2\pi \\
+    &\Rightarrow& \sin(x) \mp \cos(x) = \pm \frac{\pi}{2} \textrm{ modulo } 2\pi \\
+    &\Rightarrow&   \frac{2}{\sqrt{2}}  \left( \sin(x)\sin\left(\frac{\pi}{4}\right) \mp \cos(x)\cos\left(\frac{\pi}{4}\right) \right) = \pm \frac{\pi}{2} \textrm{ modulo } 2\pi \\
+    &\Rightarrow& \left| \frac{2}{\sqrt{2}} \cos\left(x \pm \frac{\pi}{4} \right) \right| = \frac{\pi}{2} \textrm{ modulo } 2\pi \\
+   &\Rightarrow&  \left| \cos\left(x \pm \frac{\pi}{4} \right) \right| = \pi\sqrt{2} \textrm{ modulo } 2\pi 
+\end{eqnarray*}
+mais le cosinus est a valeurs dans $[-1,1]$ et $\pi\sqrt{2}>1$, donc il n'y a pas de solution réelle. Ceci montre que $f$ ne change pas de signe. Évaluons $f(0)$ pour trouver le signe de $f$:
+\begin{eqnarray*}
+    f(0) &=& \cos(\sin(0))-\sin(\cos(0)) \\
+    &=& 1-\sin(1) \\
+    f(0) &>& 0
+\end{eqnarray*}
+Ce qui prouve le résultat.
