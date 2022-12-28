@@ -1,0 +1,12 @@
+Montrons le résultat par récurrence sur $\mathbb{N}$.
+\begin{itemize}
+  \item \textit{Initialisation} pour $n=0$, $5^1=1+1\times 2^2$ donc $\lambda_0=1$.
+  \item \textit{Hérédité} supposons la propriété vraie au rang $n\in\mathbb{N}$. Alors:
+  \begin{eqnarray*}
+    5^{2^{n+1}} &=& \left(5^{2^n}\right)^2 \\
+    &=& \left(1+\lambda_n2^{n+2}\right)^2 \\
+    &=& 1 + 2\lambda_n 2^{n+2} + \lambda_n^2 2^{2(n+2)} \\
+    &=& 1 + \left( \lambda_n + \lambda_n^2 2^{n+1} \right)  2^{(n+1)+2}
+  \end{eqnarray*}
+  or $ \lambda_n $ est impair et $\lambda_n^2 2^{n+1}$ est pair, donc leur somme est impaire, ce qui montre qur la propriété est vraie au rang $n+1$.
+\end{itemize}

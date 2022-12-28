@@ -1,0 +1,23 @@
+a) Si $a=1$, alors $(u_n)$ est une suite arithmétique de raison $b$, et l'on a:
+\[
+\forall n\in \mathbb{N}, \quad u_n=u_0+bn
+\] 
+b) Comme on suppose $a\neq 1$, $\ell=a\ell+b \Leftrightarrow \ell=\frac{b}{1-a}$\\
+c) Pour tout $n\in\mathbb{N}$:
+\begin{eqnarray*}
+  v_{n+1} &=& u_{n+1}-\ell \\
+    &=& (au_{n}+b)-(a\ell+b) \\
+    &=& a(u_n-\ell) \\
+    &=& av_n
+\end{eqnarray*}
+donc $(v_n)$ est une suite géométrique de raison $a$. On a donc, pour tout $n\in \mathbb{N}$ :
+\begin{eqnarray*}
+  v_n &=& v_0a^n \\
+    &=& (u_0-\ell)a^n \\
+    &=& \left( u_0 - \frac{b}{1-a} \right)a^n
+\end{eqnarray*}
+et finalement:
+\[
+\forall n\in \mathbb{N}, \quad u_n = \frac{b}{1-a} +\left( u_0 - \frac{b}{1-a} \right)a^n
+\]
+d) D’après l'expression analytique de $(u_n)$, la suite converge si et seulement si $u_0=\frac{b}{1-a}$ (suite constante) ou $|a|<1$. Dans les deux cas, la suite tend vers son point fixe $\ell = \frac{b}{1-a}$.
