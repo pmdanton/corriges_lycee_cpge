@@ -1,0 +1,32 @@
+Soit $D$ la tangente commune, comme $(fg)'=f'g+fg'$, les trois équations correspondantes sont:
+\begin{eqnarray*}
+  D_1 &:& x \mapsto f(0)+xf'(0) \\
+  D_2 &:& x \mapsto g(0)+xg'(0) \\
+  D_3 &:& x \mapsto \frac{f(0)g(0)}{2}+\frac{x}{2}(f(0)'g(0)+f(0)g'(0)) \\
+\end{eqnarray*}
+On voit que:
+\[
+\frac{D_1(x)D_2(x)}{2} - D_3(x)  = x^2\frac{f'(0)g'(0)}{2}
+\]
+d'une part, et d'autre part, 
+\[
+x^2f'(0)g'(0)=(D_1(x)-f(0))(D_2(x)-g(0)) = D(x)^2-D(x)(f(0)+g(0))+f(0)g(0)
+\]
+ce qui amène:
+\[
+\frac{D(x)^2}{2}-D(x)=\frac{D(x)^2}{2}-\frac{D(x)(f(0)+g(0))+f(0)g(0)}{2}
+\]
+et après simplification,
+\[
+D(x)\left( \frac{f(0)+g(0)}{2}-1 \right) = \frac{f(0)g(0)}{2}
+\]
+Comme $f$ et $g$ ont la même tangente en 0, $f(0)=g(0)$, et l'on note $a$ leur valeur commune.
+\[
+D(x)(a-1)=\frac{a^2}{2}
+\]
+Nécessairement $a\neq 1$ donc $D(x)=\frac{a^2}{2(a-1)}$. On voit que $D(x)$ ne dépend pas de $x$: la tangente est parallèle a l'axe des abscisses. En particulier pour $x=0$:
+\[
+a = \frac{a^2}{2(a-1)} \Leftrightarrow 2a(a-1)=a^2 \Leftrightarrow a \in \lbrace 0; 2 \rbrace
+\]
+
+\textit{Alternative}: on vient de voir une solution sophistiquée, mais il est possible de simplement identifier $f(0)=g(0)=f(0)g(0)/2 \Rightarrow f(0) \in \lbrace 0; 2 \rbrace$ et $f'(0)=g'(0) = 2f(0)f'(0)/2 \Rightarrow f'(0)=0$ et conclure.
