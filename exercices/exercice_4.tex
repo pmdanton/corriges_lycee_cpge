@@ -1,0 +1,16 @@
+On vérifie (par exemple par récurrence) que pour tout $n\in\mathbb{N}$, $t_n>0$, donc on peut considérer la suite définie pour $u_n=\ln(t_n)$ pour $n\in\mathbb{N}$. Alors:
+\begin{eqnarray*}
+  u_{n+1} &=& \ln(t_{n+1}) \\
+  &=& \ln\left(\frac{\sqrt{t_{n}}}{e}\right) \\
+  &=& \frac{1}{2}\ln(t_{n})-1 \\
+  &=& \frac{1}{2}u_n-1
+\end{eqnarray*}
+Ainsi, $(u_n)$ est une suite arithmético-géométrique. D’après l’exercice 3, et avec les mêmes notations, on obtient $\ell = -2$ et pour tout $n$:
+\[
+u_n = \left(\frac{1}{2}\right)^{n-1}-2
+\]
+et par conséquent:
+\[
+t_n = e^{-2}e^{-\frac{1}{2^{n-1}}}
+\]
+et l'on conclut que $t_n\to e^{-2}$ quand $n$ tend vers $+\infty$.  

@@ -1,0 +1,9 @@
+On remarque que $x_1=1$, $x_2=2$, $x_3=4$, $x_4=8$... Montrons donc par récurrence que pour tout $n\geq 1$, $x_n=2^{n-1}$ (le cas $n=0$ étant connu).
+\begin{itemize}
+  \item \textit{Initialisation}: pour $n=1$, on a bien $1=2^{1-1}$.
+  \item \textit{Hérédité}: supposons la propriété vraie au rang $n \geq 1$. Alors:
+  \[
+  x_{n+1} = \sum_{k=0}^{n-1}{x_k} + x_n = 2x_n = 2^n = 2^{(n+1)-1}
+  \] 
+  ce qui prouve le résultat.
+\end{itemize}
