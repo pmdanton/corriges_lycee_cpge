@@ -1,0 +1,16 @@
+a) Supposons $f$ paire, c'est-à-dire que pour tout $x$ réel, $f(-x)=f(x)$. Soit $h>0$, alors:
+\[
+\frac{f(-x+h)-f(-x)}{h} = \frac{f(x-h)-f(x)}{h} = - \frac{f(x+\hat{h})-f(x)}{\hat{h}}
+\]
+en posant $\hat{h}=-h$, donc en faisant tendre $h$ vers 0 on voit que $f'(-x)=-f'(x)$, donc $f'$ est impaire.\\
+b) De la même façon, si $f$ est impaire, $f(-x)=-f(x)$ et:
+\[
+\frac{f(-x+h)-f(-x)}{h} = \frac{-f(x-h)+f(x)}{h} = \frac{f(x+\hat{h})-f(x)}{\hat{h}}
+\]
+ce qui montre, en faisant tendre $h$ vers 0, que $f'(-x)=f'(x)$, donc $f'$ est paire.\\
+c) enfin, si $f$ est $T$-périodique, $f(x+T)=f(x)$ donc:
+\[
+\frac{f(x+T+h)-f(x+T)}{h} = \frac{f(x+h)-f(x)}{h} 
+\]
+et en faisant tendre $h$ vers 0, on obtient que $f'$ est $T$-périodique. \\ \\
+\textit{Alternative}: pour a) et b) on peut aussi définir $g:x \mapsto-x$ et calculer $(f\circ g)'$ avec la formule de dérivation des fonctions composées. Pour c) on peut utiliser $g: x \mapsto x+T$
