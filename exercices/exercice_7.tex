@@ -1,0 +1,14 @@
+\begin{itemize}
+  \item \textit{Initialisation}: La propriété est immédiate pour $n=0$ et $n=1$
+  \item \textit{Hérédité}: Supposons la propriété vraie jusqu'au rang $n\geq 1$, alors:
+  \begin{eqnarray*}
+    u_{n+1} &=& 5u_n - 6u_{n-1} \\
+    &=& 5(2^n+3^n)-6(2^{n-1}+3^{n-1}) \\
+    &=& 2^{n-1}(5\times 2 -6)+3^{n-1}(5\times 3-6) \\
+    &=& 2^{n-1}\times2^2 + 3^{n-1}\times 3^2 \\
+    &=& 2^{n+1}+3^{n+1}
+  \end{eqnarray*}
+  ce qui achève la preuve.\\
+\end{itemize}
+
+\textit{Remarque}: on utilise l’hypothèse de récurrence aux rangs $n$ et $n-1$, donc l'initialisation doit porter sur les deux premiers termes.

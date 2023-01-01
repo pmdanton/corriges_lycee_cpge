@@ -1,0 +1,27 @@
+a) Les premiers termes de la suite valent -1, 1, -1, 1, -1,... On va donc montrer par récurrence que pour tout $n\in\mathbb{N}$, $\Delta_n=(-1)^{n+1}$.
+\begin{itemize}
+  \item \textit{Initialisation}: D’après ce qui précède, la propriété est vraie pour $n=0$
+  \item \textit{Hérédité}: Supposons la propriété vraie jusqu'au rang $n\geq 0$, alors:
+  \begin{eqnarray*}
+    \Delta_{n+1} &=& F_{n+1}F_{n+3}-F_{n+2}^2 \\
+    &=& F_{n+1}(F_{n+1}+F_{n+2})-F_{n+2}(F_n+F_{n+1}) \\
+    &=& F_{n+1}^2 +F_{n+1}F_{n+2}-F_{n+2}F_n-F_{n+1}F_{n+2} \\
+    &=& -\Delta_n \\
+    &=& (-1)^{n+2}
+  \end{eqnarray*}
+  ce qui achève la preuve.
+\end{itemize}
+b) Avec les notations du polycopié, pour tout entier naturel $n$, $F_n=\frac{\alpha^n-\beta^n}{\sqrt{5}}$, et par suite:
+\begin{eqnarray*}
+  \Delta_n &=& \frac{\alpha^n-\beta^n}{\sqrt{5}} \times \frac{\alpha^{n+2}-\beta^{n+2}}{\sqrt{5}} - \left( \frac{\alpha^{n+1}-\beta^{n+1}}{\sqrt{5}}\right)^2 \\
+  &=& \frac{1}{5} \left( \alpha^{2n+2} - \alpha^n\beta^{n+2}-\alpha^{n+2}\beta^n + \beta^{2n+2} - \alpha^{2n+2} - \beta^{2n+2} + 2\alpha^{n+1}\beta^{n+1} \right) \\
+  &=& \frac{1}{5} \left(- \alpha^n\beta^{n+2}-\alpha^{n+2}\beta^n + 2\alpha^{n+1}\beta^{n+1} \right) \\
+  &=& \frac{(\alpha\beta)^n}{5}\left(2\alpha\beta - (\alpha+\beta)\right)
+\end{eqnarray*}
+ici, on utilise le fait que $\alpha$ et $\beta$ sont les racines de $x^2-x-1=0$, donc\footnote{Rappel: quand elles existent et $a\neq 0$, les racines réelles de $ax^2+bx+c=0$ ont pour somme $-b/a$ et pour produit produit $c/a$} leur somme vaut 1 et leur produit vaut $-1$. Ainsi:
+\begin{eqnarray*}
+  \Delta_n &=& \frac{(\alpha\beta)^n}{5}(2\alpha\beta - (\alpha+\beta)) \\
+  &=& \frac{(-1)^n}{5}(-4-1) \\
+  &=& (-1)^{n+1}
+\end{eqnarray*}
+comme attendu.

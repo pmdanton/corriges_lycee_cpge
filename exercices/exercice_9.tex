@@ -1,0 +1,15 @@
+Les premiers termes de la suite valent 0, 0, 1, 1, 2, 2, 3, 3,... On va donc montrer par récurrence que pour tout $n\in\mathbb{N}$, $u_n=\lfloor n/2 \rfloor$.
+\begin{itemize}
+  \item \textit{Initialisation}: D’après ce qui précède, la propriété est vraie pour $n=0$ et $n=1$
+  \item \textit{Hérédité}: Supposons la propriété vraie jusqu'au rang $n\geq 1$, alors:
+  \begin{eqnarray*}
+    u_{n+1} &=& n - u_{n}\\
+    &=& n - \lfloor n/2 \rfloor 
+  \end{eqnarray*}
+  et l'on va séparer les cas pairs et impairs:
+  \begin{itemize}
+    \item Si $n=2k$ pour $k\in\mathbb{N}$, alors $u_{n+1}=2k-\lfloor k \rfloor = k = \lfloor \frac{2k+1}{2} \rfloor = \lfloor (n+1)/2 \rfloor$
+    \item Si $n=2k+1$ pour $k\in\mathbb{N}$, alors $u_{n+1}=2k+1-\lfloor (2k+1)/2 \rfloor = 2k+1-k = k+1 = \lfloor (n+1)/2 \rfloor$
+  \end{itemize}
+  donc dans tous les cas $u_{n+1}=\lfloor (n+1)/2 \rfloor$, ce qui achève la preuve.
+\end{itemize}

@@ -1,0 +1,11 @@
+Montrons par récurrence que pour tout $n\in\mathbb{N}$, $u_n=2^n$.
+\begin{itemize}
+  \item \textit{Initialisation}: La propriété est vraie par définition pour $n=0$ et $n=1$
+  \item \textit{Hérédité}: Supposons la propriété vraie jusqu'au rang $n\geq 1$, alors:
+  \begin{eqnarray*}
+    u_{n+1} &=& \frac{u_n^2}{u_{n-1}} \\
+    &=& \frac{2^{2n}}{2^{n-1}} \\
+    &=& 2^{n+1}
+  \end{eqnarray*}
+  ce qui achève la preuve.
+\end{itemize}
