@@ -1,0 +1,15 @@
+a) Soient $\alpha$ et $\beta$ dans $\mathbb{R}$, alors pour tout $n\in\mathbb{N}$:
+\begin{eqnarray*}
+  u_{n+2} &=& \alpha\lambda^{n+2}+\beta\mu^{n+2} \\
+  &=& \alpha\lambda^{n}(a\lambda + b)+\beta\mu^{n}(a\mu + b) \\
+   &=& a\left(\alpha\lambda^{n+1}+\beta\mu^{n+1}\right)+b\left(\alpha\lambda^{n}+\beta\mu^{n}\right) \\
+   &=& au_{n+1}+bu_n
+\end{eqnarray*}
+donc $(\alpha\lambda^{n}+\beta\lambda^{n})_{n\geq 0} \in \mathcal{E}$.\\ \\
+b) Quitte à échanger $\lambda$ et $\mu$, on peut supposer $\lambda\neq 0$. Comme $\alpha+\beta=u_0 \Leftrightarrow \lambda\alpha + \lambda \beta = \lambda u_0$, le système est équivalent à $\alpha+\beta=u_0$ et $\beta(\lambda-\mu)=\lambda u_0 - \mu$. Comme $\lambda \neq \mu$, on peut diviser par $\lambda-\mu$, et le système est équivalent à $\beta = \frac{\lambda u_0 - \mu}{\lambda-\mu}$ et $\alpha=u_1-\frac{\lambda u_0 - \mu}{\lambda-\mu}$.\footnote{en prépa, on écrira le problème sous forme matricielle, et il suffira de montrer que le déterminant de la matrice est non nul pour conclure: ici, il vaut $\mu-\lambda\neq 0$.}\\ \\
+c) On va montrer le résultat par récurrence.
+\begin{itemize}
+  \item \textit{Initialisation}: D’après b), la propriété est vraie pour $n=0$ et $n=1$.
+  \item \textit{Hérédité}: supposons la propriété vraie jusqu'au rang $n\geq 1$, alors la preuve de l'hérédité est identique au calcul mené au point a).\\
+\end{itemize}
+d) Les solutions $\lambda, \mu$ de $x^2=5x-6$ sont $\{2;3\}$ donc d’après c), il existe deux réels $\alpha, \beta$ tels que $u_n=\alpha 2^n + \beta 3^n$. Comme dans b), on obtient $\beta = \frac{\lambda u_0 - \mu}{\lambda-\mu} = 1$ et $\alpha = u_0-\beta = 1$.
