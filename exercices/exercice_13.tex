@@ -1,0 +1,11 @@
+a) Montrons le résultat par récurrence sur $m\in\mathbb{N}$:
+\begin{itemize}
+  \item \textit{Initialisation}: comme $2^0=1\in A$, la propriété est vraie pour $m=0$.
+  \item \textit{Hérédité}: Supposons la propriété vraie au rang $m\geq 0$. On a: $2^{m+1}=2\times 2^m$. Par hypothèse de récurrence, $2^m \in A$, donc par stabilité de $A$ par doublement, $2^{m+1}\in A$, ce qui achève la preuve. \\ 
+\end{itemize}
+b) Comme par définition $A\subseteq \mathbb{N}^*$, on va montrer que . Soit $n\in\mathbb{N}^*$: on souhaite montrer que $n\in A$. Comme $2^m\to +\infty$, il existe $m_0\in\mathbb{N}$ tel quel $n\leq 2^{m_0}$, et un entier $k\in\{ 0,\cdots, 2^{m_0}-1 \}$ tel que $n=2^{m_0}-k$. Montrons par récurrence finie que pour tout $k\in\{ 0,\cdots, 2^{m_0}-1 \}$,  $2^{m_0}-k\in A$.
+\begin{itemize}
+  \item \textit{Initialisation}: comme $2^{m_0}-0=2^{m_0}\in A$ d’après a), la propriété est vraie pour $k=0$.
+  \item \textit{Hérédité}: Supposons la propriété vraie au rang $k\in\{ 0,\cdots, 2^{m_0}-2 \}$. Alors $2^{m_0}-(k+1)=\left(2^{m_0}-k\right)-1$, et par hypothèse de récurrence $2^{m_0}-k\in A$, donc par propriété \textit{ii)} on a $2^{m_0}-(k+1)\in A$.
+\end{itemize}
+Finalement, $n\in A$, ce qui prouve que $\mathbb{N}^* \subseteq A$, et par suite que $A=\mathbb{N}^*$.
