@@ -1,0 +1,15 @@
+a) pour $x=y=0$, on a $2f(0)=4f(0)$, donc $f(0)=0$. Pour la parité, on considère $x=0$ et $y\in\mathbb{R}$, alors $f(y)+f(-y)=2(f(0)+f(y)) = 2f(y)$, donc $f(-y)=f(y)$, ce qui montre que $f$ est paire.\\ \\
+b) Soit $(x,h)\in (\mathbb{R}^*_+)^2$:
+\begin{eqnarray*}
+ f(x+h)+f(x-h) - 2f(x) = 2f(h) & \Rightarrow &  \frac{f(x+h)+f(x-h) - 2f(x)}{h^2} = \frac{2f(h)}{h^2} \\
+ & \Rightarrow &  \frac{f(x+h)+f(x-h) - 2f(x)}{h^2} = \frac{f(h)+f(-h)-2f(0)}{h^2} \\
+  & \Rightarrow &  \lim_{h\to 0} \frac{f(x+h)+f(x-h) - 2f(x)}{h^2} = \lim_{h \to 0}\frac{f(h)+f(-h)-2f(0)}{h^2} \\
+  & \Rightarrow &  f''(x) = f''(0)
+\end{eqnarray*}
+ce qui prouve que $f''$ est constante. \\ \\
+c) On déduit de b) qu'il existe $a,b,c$ réels tels que $f(x)=ax^2+bx+c$. 
+\begin{itemize}
+  \item $f(0)=0 \Rightarrow c=0$, donc $f(x)=ax^2+bx$
+  \item Comme $f$ est paire, sa dérivée est impaire (voir exercice 151), et en particulier $f'(0)=0$. Comme $f'(x)=2ax+b$, on obtient $b=0$.
+  \item On conclut avec la synthèse: s'il existe $a\in \mathbb{R}$ tel que, pour tout $x\in\mathbb{R}$, $f(x)=ax^2$, alors pour tous $x,y$ réels $f(x+y)+f(x-y)=a(x+y)^2+a(x-y)^2=2(ax^2+ay^2)$, comme attendu. Finalement, on a bien caractérisé l'ensemble des solutions. 
+\end{itemize}
