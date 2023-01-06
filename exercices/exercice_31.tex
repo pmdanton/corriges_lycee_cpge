@@ -1,0 +1,18 @@
+Calculons quelques exemples: 
+\begin{itemize}
+  \item $1\times 2 \times 3 \times 4 + 1 = 5^2$
+  \item $2\times 3 \times 4 \times 5+1 =11^2$
+  \item $3 \times 4 \times 5 \times 6 +1 =19^2$
+  \item $4 \times 5 \times 6 \times 7 +1 = 29^2$
+\end{itemize}
+On va donc montrer que pour tout $k\in\mathbb{N}^*$ 
+\[ k(k+1)(k+2)(k+3)+1=\left( (k+1)(k+2) -1 \right)^2 \]
+Développons le membre de droite:
+\begin{eqnarray*}
+  \left( (k+1)(k+2) -1 \right)^2 &=& (k+1)^2(k+2)^2 -2(k+1)(k+2)+1 \\
+  &=& (k+1)(k+2)\left[ (k+1)(k+2)-2 \right]+1 \\
+  &=& (k+1)(k+2)( k^2 + 3k )+1 \\
+  &=& k(k+1)(k+2)(k+3)+1
+\end{eqnarray*}
+
+\textit{Remarque}: on a aussi $k(k+1)(k+2)(k+3)+1 = \left(k(k+3)+1\right)^2$
