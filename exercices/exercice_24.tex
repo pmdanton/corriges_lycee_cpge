@@ -3,9 +3,12 @@ b) Montrons par récurrence que pour tout $n\in\mathbb{N}$, et pour tout $x\in\m
 \begin{itemize}
   \item \textit{Initialisation}: Fixons $n=0$. Quel que soit $x\in\mathbb{R}$, on a bien $f(0\cdot x)=0\cdot f(x)$
   \item \textit{Hérédité}: Supposons la propriété vraie au rang $n\in\mathbb{N}$. Alors, pour tout $x$ réel:
-  \[
-  f((n+1)x) = f(nx)+f(x) = nf(x)+f(x) = (n+1)f(x)
-  \]
+  \begin{eqnarray*}
+    f((n+1)x) &=& f(nx+x) \\
+    &=& f(nx) + f(x) \\
+    &=& nf(x)+f(x) \\
+    &=& (n+1)f(x)
+  \end{eqnarray*}
   ce qui achève la preuve.
 \end{itemize}
 Puisque $f$ est impaire, le résultat peut être étendu sur $\mathbb{Z}$: 
@@ -17,5 +20,5 @@ ce qui implique $f\left(\frac{1}{q}\right) = \frac{f(1)}{q}$. Soit $x\in\mathbb{
 \[
 f\left(\frac{p}{q}\right) = pf\left(\frac{1}{q}\right) = \frac{p}{q}f(1) = ax
 \]
-d) Tout réel s’écrit comme limite d'une suite de nombres rationnels car $\mathbb{Q}$ est dense dans $\mathbb{R}$: en particulier, tout intervalle (non-vide) de $\mathbb{R}$ contient au moins un rationnel\footnote{et même une infinité, mais un seul nous suffit ici!}. Soit $x\in\mathbb{R}$: alors pour tout $n\in\mathbb{N}^*$, l'intervalle $[x-1/n, x+1/n]$ contient un rationnel $r_n$, et $|r_n-x|\leq \frac{1}{n}$ donc $r_n\to x$.\\ \\
+d) Tout réel s’écrit comme limite d'une suite de nombres rationnels car $\mathbb{Q}$ est dense dans $\mathbb{R}$: en particulier, tout intervalle ouvert non vide de $\mathbb{R}$ contient au moins un rationnel\footnote{et même une infinité, mais un seul nous suffit ici!}. Soit $x\in\mathbb{R}$: alors pour tout $n\in\mathbb{N}^*$, l'intervalle $\left]x-\frac{1}{n}, x+\frac{1}{n}\right[$ contient un rationnel $r_n$, et $|r_n-x| < \frac{1}{n}$ donc $r_n\to x$.\\ \\
 e) Soit $x\in\mathbb{R}$. D’après d), il existe une suite de rationnels $(x_n)$ qui tend vers $x$. D’après c), pour tout $n\in\mathbb{N}$, $f(x_n)=ax_n\to ax$, et comme $f$ est continue, $f(x_n)\to f(x)$. Par unicité de la limite, on conclut que $f(x)=ax$.
