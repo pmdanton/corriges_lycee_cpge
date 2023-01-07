@@ -1,0 +1,8 @@
+On suppose que chaque match est la réalisation d'une variable aléatoire, et que tous les matchs sont indépendants (ce qui est manifestement faux, par exemple en raison de la fatigue accumulée). Pour s'imposer, $A$ doit nécessairement remporter le deuxième match, et au moins l'un des deux autres.\\
+On appelle $p_{BA}$ la probabilité que $B$ batte $A$, et $p_{CA}$ la probabilité que $C$ batte $A$. La probabilité de gagner au moins une fois contre le joueur $x\in\{B,C\}$ en 2 matchs est $1-p^2_{xA}$.\\ Ainsi, pour la configuration $BCB$, la probabilité de victoire de $A$ vaut:
+\[
+(1-p_{CA})(1-p^2_{BA}) = (1-p_{CA})(1-p_{BA})(1+p_{BA})
+\] 
+et pour la configuration $CBC$:
+\[(1-p_{BA})(1-p^2_{CA})=(1-p_{BA})(1-p_{CA})(1+p_{CA})\]
+Comme $C$ est meilleur que $B$, $p_{BA} \leq p_{CA}$, et $1+p_{BA} \leq 1+p_{CA}$. L'ordre qui maximise les chances de $A$ est donc $CBC$.

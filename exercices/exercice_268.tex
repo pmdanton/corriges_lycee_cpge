@@ -1,0 +1,5 @@
+a) Pour un lancer, la probabilité d'obtenir $n$ fois 6 est de $\frac{1}{6^n}$, donc la probabilité de ne pas l'obtenir est $1-\frac{1}{6^n}$. Alors, si l'on effectue $4\cdot 6^{n-1}$ lancers, la probabilité de ne jamais obtenir $n$ fois 6 est de $\left(1-\frac{1}{6^n}\right)^{4\cdot 6^{n-1}}=\left(\left(1-\frac{1}{6^n}\right)^{6^{n}}\right)^{4/6}$, donc la probabilité d'observer au moins une fois $n$-fois-6 vaut
+\[
+p_n = 1- \left(\left(1-\frac{1}{6^n}\right)^{6^n}\right)^{\frac{2}{3}}
+\]
+b) On sait que $\left(1-\frac{1}{6^n}\right)^{6^n}\to e^{-1}$ quand $n$ tend vers l'infini, donc par continuité $p_n\to 1-e^{-\frac{2}{3}}\approx 0.4865$

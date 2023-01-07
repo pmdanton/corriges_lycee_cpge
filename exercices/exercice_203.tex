@@ -1,0 +1,10 @@
+Montrons par récurrence que pour tout $n\in\mathbb{N}$: $u_n=u_0^{\frac{1}{2^n}}$.
+\begin{itemize}
+  \item Initialisation: Pour $n=0$, le résultat est immédiat.
+  \item Hérédité: Supposons la propriété vraie au range $n\in\mathbb{N}$, alors:
+  \[
+  u_{n+1} = (u_n)^{\frac{1}{2}}=\left(u_0^{\frac{1}{2^n}}\right)^{\frac{1}{2}} = u_0^{\frac{1}{2^{n+1}}}
+  \]
+  ce qui prouve le résultat.
+\end{itemize}
+Ensuite, pour $n\to +\infty$ on a $\frac{1}{2^n}\to 0$, et par continuité cela entraîne $u_n\to 1$ car $u_0>0$.
