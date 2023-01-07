@@ -1,0 +1,19 @@
+Montrons par récurrence que $\varphi_{\alpha}^{(n)} = \left(\prod_{j=1}^n{(\alpha-j+1)}\right)\varphi_{\alpha-n}$
+\begin{itemize}
+  \item \textit{Initialisation}: pour $n=0$, on a bien $\varphi_{\alpha}^{(0)} = \varphi_{\alpha}$ (par convention, un produit sans facteur vaut 1).
+  \item \textit{Hérédité}: supposons la propriété vraie au rang $n\geq 0$. Alors 
+  \begin{eqnarray*}
+  \varphi_{\alpha}^{(n+1)} &=& \left(\prod_{j=1}^n{(\alpha-j+1)}\right)\varphi_{\alpha-n}' \\
+  &=& \left(\prod_{j=1}^n{(\alpha-j+1)}\right)(\alpha-n)\varphi_{\alpha-n-1} \\
+   &=& \left(\prod_{j=1}^{n+1}{(\alpha-j+1)}\right)\varphi_{\alpha-(n+1)}
+  \end{eqnarray*}
+  ce qui achève la preuve.
+\end{itemize}
+\textit{Remarque}: si $\alpha\in\mathbb{N}$, le produit s'annule pour tout $n > \alpha$, comme attendu, et pour tout $n\leq \alpha$ on peut écrire:
+\[
+\prod_{j=1}^n{(\alpha-j+1)} = \frac{\alpha!}{(\alpha-n)!}
+\]
+La notation "factorielle" ne s'applique qu'aux entiers, mais il existe une extension sur $\mathbb{R}$ appelée $\Gamma$ (gamma) qui vérifie, pour tout $n$ entier, $\Gamma(n+1)=n!$, et on peut écrire:
+\[
+\varphi_{\alpha}^{(n)} = \frac{\Gamma(\alpha+1)}{\Gamma(\alpha-n+1)}\varphi_{\alpha-n}
+\]
