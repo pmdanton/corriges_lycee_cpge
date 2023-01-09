@@ -1,0 +1,18 @@
+La probabilité d'avoir au moins deux votes justes vaut 1 moins la probabilité d'avoir au plus un vote juste. En supposant que les membres du jury décident de manière indépendante:
+\begin{itemize}
+  \item La probabilité de n'avoir aucun vote juste est $\frac{(1-p)^2}{2}$
+  \item La probabilité d'avoir exactement un vote juste est $2\frac{p(1-p)}{2}+\frac{(1-p)^2}{2}=p(1-p)+\frac{(1-p)^2}{2}$
+\end{itemize}
+Donc la probabilité complémentaire vaut: 
+\begin{eqnarray*}
+\frac{(1-p)^2}{2}+p(1-p)+\frac{(1-p)^2}{2} &=& p(1-p)+(1-p)^2  \\
+&=& (1-p)(p+(1-p))\\
+&=&1-p
+\end{eqnarray*}
+Et donc la probabilité recherchée vaut $p$.\\ \\
+\textit{Alternative}: On peut utiliser la probabilité conditionnelle sachant le vote du troisième jury:
+\begin{itemize}
+  \item Si le troisième jury vote juste (probabilité 1/2): la probabilité d'avoir au moins un vote juste parmi les deux premiers est $1-(1-p)^2$
+  \item Si le troisième jury ne vote pas juste (probabilité 1/2): la probabilité d'avoir deux votes justes parmi les deux premiers est $p^2$
+\end{itemize}
+la probabilité cherchée vaut donc $\frac{1-(1-p)^2+p^2}{2}=\frac{1-1+2p-p^2+p^2}{2}=p$

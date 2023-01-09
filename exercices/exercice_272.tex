@@ -1,0 +1,9 @@
+Il y a $10+n$ boules au total, donc \`a chaque tirage la probabilité d'obtenir une boule noire est $\frac{10}{10+n}$. En 20 tirages la probabilité d'obtenir 20 boules noires est donc $\left(\frac{10}{10+n}\right)^{20}$, et celle d'obtenir au moins une boule blanche est $p_n=1-\left(\frac{10}{10+n}\right)^{20}$. Ensuite:
+\begin{eqnarray*}
+  p_n \geq \frac{1}{2} &\Leftrightarrow& 1-\left(\frac{10}{10+n}\right)^{20} \geq \frac{1}{2} \\
+  &\Leftrightarrow& \left(\frac{10}{10+n}\right)^{20} \leq \frac{1}{2} \\
+  &\Leftrightarrow& 2\cdot 10^{20} \leq (10+n)^{20}\\
+  &\Leftrightarrow& 2^{\frac{1}{20}}\cdot 10 \leq 10+n\\
+  &\Leftrightarrow& 10\left( 2^{\frac{1}{20}} -1\right) \leq n\\
+\end{eqnarray*}
+On calcule que $10\left( 2^{\frac{1}{20}} -1\right)\approx 0,35$, donc $p_n\geq \frac{1}{2} \Leftarrow n\geq 1$: une seule boule blanche suffit. On vérifie bien que $p_1\approx 0,85$.\\ \\

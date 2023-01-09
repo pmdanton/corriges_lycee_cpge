@@ -1,0 +1,5 @@
+La première personne a 365 "choix" possibles\footnote{On suppose implicitement que la distribution des naissances est uniforme dans l’année, ce qui est plutôt faux en pratique. On va supposer $m<365$, sinon l'exercice est trivial et $p_m=1$.}, la deuxième 364, la troisième 363, etc... de proche en proche, la $k^\textrm{\`eme}$ personne a $365-(k-1)$ "choix" possibles. Donc, la probabilité que les $m$ personnes aient des dates d'anniversaire distinctes est $\frac{365\times 364\times \cdots \times (365-(m-1))}{365^m}$, et celle que deux individus au moins : 
+\[
+p_m = 1-\frac{365\times 364\times \cdots \times (365-(m-1))}{365^m}
+\]
+En faisant l'application numérique, on obtient $p_m\geq \frac{1}{2} \Leftrightarrow m\geq 23$. Pour $m=23$, $p_m=0,5073$. Avec 69 personnes, la probabilité dépasse 99\%. 
